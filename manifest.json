@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Shorts Limiter",
+  "version": "1.0",
+  "description": "Restricts YouTube Shorts usage and forces redirects.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shorts Limiter</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 10px;
+      font-family: sans-serif;
+    }
+
+    input,
+    button {
+      width: 100%;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Shorts Limiter</h3>
+  <label>Daily Limit:</label>
+  <input type="number" id="limitInput" min="0" value="10">
+
+  <p>
+    Watched Today:
+    <span id="watchedCount">0</span>
+  </p>
+
+  <button id="resetBtn">
+    Reset Counter
+  </button>
+
+  <button id="saveBtn">Save Limit</button>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
